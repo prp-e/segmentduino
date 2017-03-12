@@ -183,7 +183,7 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
- for(i = 0; i < 0x10; i++){
+ for(i = 0; i < 4; i++){
   SegmentDisplay(a, b, c, d, e, f, g, i); 
   delay(1000); 
   pinMask(a, b, c, d, e, f, g); 
