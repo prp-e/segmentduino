@@ -1,3 +1,6 @@
+#define ANODE 1
+#define CATHODE 0
+
 int a = 7; 
 int b = 8;
 int c = 9;
@@ -8,166 +11,183 @@ int g = 13;
 
 int i = 0;
 
-void SegmentDisplay(int a, int b, int c, int d, int e, int f, int g, int input){
+void SegmentDisplay(int a, int b, int c, int d, int e, int f, int g, int input, int type){
+  int high;
+  int low;
+  if(type == ANODE){
+    high = 1; 
+    low = 0; 
+    } else {
+      high = 0;
+      low = 1;
+    }
   switch(input){
     case 0 :
-     digitalWrite(a, LOW);
-     digitalWrite(b, LOW);
-     digitalWrite(c, LOW);
-     digitalWrite(d, LOW); 
-     digitalWrite(e, LOW); 
-     digitalWrite(f, LOW);
-     digitalWrite(g, HIGH);
+     digitalWrite(a, low);
+     digitalWrite(b, low);
+     digitalWrite(c, low);
+     digitalWrite(d, low); 
+     digitalWrite(e, low); 
+     digitalWrite(f, low);
+     digitalWrite(g, high);
      break;
     case 1 :
-     digitalWrite(a, HIGH);
-     digitalWrite(b, LOW);
-     digitalWrite(c, LOW);
-     digitalWrite(d, HIGH); 
-     digitalWrite(e, HIGH); 
-     digitalWrite(f, HIGH);
-     digitalWrite(g, HIGH);
+     digitalWrite(a, high);
+     digitalWrite(b, low);
+     digitalWrite(c, low);
+     digitalWrite(d, high); 
+     digitalWrite(e, high); 
+     digitalWrite(f, high);
+     digitalWrite(g, high);
      break;
     case 2 :
-     digitalWrite(a, LOW);
-     digitalWrite(b, LOW);
-     digitalWrite(c, HIGH);
-     digitalWrite(d, LOW); 
-     digitalWrite(e, LOW); 
-     digitalWrite(f, HIGH);
-     digitalWrite(g, LOW);
+     digitalWrite(a, low);
+     digitalWrite(b, low);
+     digitalWrite(c, high);
+     digitalWrite(d, low); 
+     digitalWrite(e, low); 
+     digitalWrite(f, high);
+     digitalWrite(g, low);
      break;
     case 3 :
-     digitalWrite(a, LOW);
-     digitalWrite(b, LOW);
-     digitalWrite(c, LOW);
-     digitalWrite(d, LOW); 
-     digitalWrite(e, HIGH); 
-     digitalWrite(f, HIGH);
-     digitalWrite(g, LOW);
+     digitalWrite(a, low);
+     digitalWrite(b, low);
+     digitalWrite(c, low);
+     digitalWrite(d, low); 
+     digitalWrite(e, high); 
+     digitalWrite(f, high);
+     digitalWrite(g, low);
      break;
     case 4 :
-     digitalWrite(a, HIGH);
-     digitalWrite(b, LOW);
-     digitalWrite(c, LOW);
-     digitalWrite(d, HIGH); 
-     digitalWrite(e, HIGH); 
-     digitalWrite(f, LOW);
-     digitalWrite(g, LOW);
+     digitalWrite(a, high);
+     digitalWrite(b, low);
+     digitalWrite(c, low);
+     digitalWrite(d, high); 
+     digitalWrite(e, high); 
+     digitalWrite(f, low);
+     digitalWrite(g, low);
      break;
     case 5 :
-     digitalWrite(a, LOW);
-     digitalWrite(b, HIGH);
-     digitalWrite(c, LOW);
-     digitalWrite(d, LOW); 
-     digitalWrite(e, HIGH); 
-     digitalWrite(f, LOW);
-     digitalWrite(g, LOW);
+     digitalWrite(a, low);
+     digitalWrite(b, high);
+     digitalWrite(c, low);
+     digitalWrite(d, low); 
+     digitalWrite(e, high); 
+     digitalWrite(f, low);
+     digitalWrite(g, low);
      break;
     case 6 :
-     digitalWrite(a, LOW);
-     digitalWrite(b, HIGH);
-     digitalWrite(c, LOW);
-     digitalWrite(d, LOW); 
-     digitalWrite(e, LOW); 
-     digitalWrite(f, LOW);
-     digitalWrite(g, LOW);
+     digitalWrite(a, low);
+     digitalWrite(b, high);
+     digitalWrite(c, low);
+     digitalWrite(d, low); 
+     digitalWrite(e, low); 
+     digitalWrite(f, low);
+     digitalWrite(g, low);
      break;
     case 7 :
-     digitalWrite(a, LOW);
-     digitalWrite(b, LOW);
-     digitalWrite(c, LOW);
-     digitalWrite(d, HIGH); 
-     digitalWrite(e, HIGH); 
-     digitalWrite(f, HIGH);
-     digitalWrite(g, HIGH);
+     digitalWrite(a, low);
+     digitalWrite(b, low);
+     digitalWrite(c, low);
+     digitalWrite(d, high); 
+     digitalWrite(e, high); 
+     digitalWrite(f, high);
+     digitalWrite(g, high);
      break;
     case 8 :
-     digitalWrite(a, LOW);
-     digitalWrite(b, LOW);
-     digitalWrite(c, LOW);
-     digitalWrite(d, LOW); 
-     digitalWrite(e, LOW); 
-     digitalWrite(f, LOW);
-     digitalWrite(g, LOW);
+     digitalWrite(a, low);
+     digitalWrite(b, low);
+     digitalWrite(c, low);
+     digitalWrite(d, low); 
+     digitalWrite(e, low); 
+     digitalWrite(f, low);
+     digitalWrite(g, low);
      break;
     case 9 :
-     digitalWrite(a, LOW);
-     digitalWrite(b, LOW);
-     digitalWrite(c, LOW);
-     digitalWrite(d, LOW); 
-     digitalWrite(e, HIGH); 
-     digitalWrite(f, LOW);
-     digitalWrite(g, LOW);
+     digitalWrite(a, low);
+     digitalWrite(b, low);
+     digitalWrite(c, low);
+     digitalWrite(d, low); 
+     digitalWrite(e, high); 
+     digitalWrite(f, low);
+     digitalWrite(g, low);
      break;
     case 10 :
-     digitalWrite(a, LOW);
-     digitalWrite(b, LOW);
-     digitalWrite(c, LOW);
-     digitalWrite(d, HIGH); 
-     digitalWrite(e, LOW); 
-     digitalWrite(f, LOW);
-     digitalWrite(g, LOW);
+     digitalWrite(a, low);
+     digitalWrite(b, low);
+     digitalWrite(c, low);
+     digitalWrite(d, high); 
+     digitalWrite(e, low); 
+     digitalWrite(f, low);
+     digitalWrite(g, low);
      break;
     case 11 :
-     digitalWrite(a, HIGH);
-     digitalWrite(b, HIGH);
-     digitalWrite(c, LOW);
-     digitalWrite(d, LOW); 
-     digitalWrite(e, LOW); 
-     digitalWrite(f, LOW);
-     digitalWrite(g, LOW);
+     digitalWrite(a, high);
+     digitalWrite(b, high);
+     digitalWrite(c, low);
+     digitalWrite(d, low); 
+     digitalWrite(e, low); 
+     digitalWrite(f, low);
+     digitalWrite(g, low);
      break;
     case 12 :
-     digitalWrite(a, LOW);
-     digitalWrite(b, HIGH);
-     digitalWrite(c, HIGH);
-     digitalWrite(d, LOW); 
-     digitalWrite(e, LOW); 
-     digitalWrite(f, LOW);
-     digitalWrite(g, HIGH);
+     digitalWrite(a, low);
+     digitalWrite(b, high);
+     digitalWrite(c, high);
+     digitalWrite(d, low); 
+     digitalWrite(e, low); 
+     digitalWrite(f, low);
+     digitalWrite(g, high);
      break;
     case 13 :
-     digitalWrite(a, HIGH);
-     digitalWrite(b, LOW);
-     digitalWrite(c, LOW);
-     digitalWrite(d, LOW); 
-     digitalWrite(e, LOW); 
-     digitalWrite(f, HIGH);
-     digitalWrite(g, LOW);
+     digitalWrite(a, high);
+     digitalWrite(b, low);
+     digitalWrite(c, low);
+     digitalWrite(d, low); 
+     digitalWrite(e, low); 
+     digitalWrite(f, high);
+     digitalWrite(g, low);
      break;
     case 14 :
-     digitalWrite(a, LOW);
-     digitalWrite(b, HIGH);
-     digitalWrite(c, HIGH);
-     digitalWrite(d, LOW); 
-     digitalWrite(e, LOW); 
-     digitalWrite(f, LOW);
-     digitalWrite(g, LOW);
+     digitalWrite(a, low);
+     digitalWrite(b, high);
+     digitalWrite(c, high);
+     digitalWrite(d, low); 
+     digitalWrite(e, low); 
+     digitalWrite(f, low);
+     digitalWrite(g, low);
      break;
     case 15 :
-     digitalWrite(a, LOW);
-     digitalWrite(b, HIGH);
-     digitalWrite(c, HIGH);
-     digitalWrite(d, HIGH); 
-     digitalWrite(e, LOW); 
-     digitalWrite(f, LOW);
-     digitalWrite(g, LOW);
+     digitalWrite(a, low);
+     digitalWrite(b, high);
+     digitalWrite(c, high);
+     digitalWrite(d, high); 
+     digitalWrite(e, low); 
+     digitalWrite(f, low);
+     digitalWrite(g, low);
      break;
 
     default:
-     digitalWrite(1, HIGH);
+     digitalWrite(1, high);
      
     }
   }
-  void pinMask(int a, int b, int c, int d, int e, int f, int g){
-     digitalWrite(a, HIGH);
-     digitalWrite(b, HIGH);
-     digitalWrite(c, HIGH);
-     digitalWrite(d, HIGH); 
-     digitalWrite(e, HIGH); 
-     digitalWrite(f, HIGH);
-     digitalWrite(g, HIGH);
+
+    
+  void pinMask(int a, int b, int c, int d, int e, int f, int g, int type){
+    int mask; 
+    if(type == ANODE){
+      mask = 1;
+    } else {
+      mask = 0;
+    }
+     digitalWrite(a, mask);
+     digitalWrite(b, mask);
+     digitalWrite(c, mask);
+     digitalWrite(d, mask); 
+     digitalWrite(e, mask); 
+     digitalWrite(f, mask);
+     digitalWrite(g, mask);
     }
 
 void setup() {
@@ -183,10 +203,10 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
- for(i = 0; i < 4; i++){
-  SegmentDisplay(a, b, c, d, e, f, g, i); 
+ for(i = 0; i < 16; i++){
+  SegmentDisplay(a, b, c, d, e, f, g, i, ANODE); 
   delay(1000); 
-  pinMask(a, b, c, d, e, f, g); 
+  pinMask(a, b, c, d, e, f, g, ANODE); 
   delay(10);
   }
 }
